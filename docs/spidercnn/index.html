@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    spidercnn
+  
+ | Tianqi Fan</title>
+
+
+
+<link rel="stylesheet" href="/book.min.f4161f5e2de53a2e927f51df1611323a2a12cccb2681f23cb6fc3517852e8643.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://example.com/">Tianqi Fan</a>
+</h2>
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fspidercnn\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><strong>Graphics</strong>
+
+<ul>
+<li><a href="/docs/spidercnn/">Point Cloud Processing</a></li>
+<li><a href="/docs/geosim/">Real-time Surface Simplification</a></li>
+<li><a href="/docs/rc2018/">Physically Based Rendering Engine</a></li>
+</ul></li>
+<li><a href="/docs/math/"><strong>Math</strong></a></li>
+<li><a href="/docs/notes/"><strong>Notes</strong></a>
+<!-- - [**Blog**](/posts/) --></li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    spidercnn
+  
+</strong>
+</header>
+
+
+      
+<article class="markdown"><h1>Exploiting Deep Learning for Point Cloud Processing</h1>
+
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN"> -->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <title>spidercnn</title> -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+<!-- <div class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="/img/merged_120samples-Edit.png" alt="Architecture" width="1500" height="800">
+</div> -->
+
+<body>
+
+<div class="w3-card-4 w3-margin w3-white">
+    <img src="/img/pcseg.png" alt="pcimg" style="width:90%">
+   <!--  <div class="w3-container">
+      <h3><b>Point cloud segmentation examples.</b></h3>
+      <h5>Point cloud segmentation examples. <span class="w3-opacity">April 7, 2014</span></h5>
+    </div> -->
+</div>
+
+<h2>Abstract</h2>
+
+<div class="w3-container">
+  <p> In this project, we propose a convolutional architecture, termed SpiderCNN, to efficiently extract geometric features from point clouds. SpiderCNN is comprised of units called SpiderConv, which extend convolutional operations from regular grids to irregular point sets that can be embedded in $\mathbb{R}^n$, by parametrizing a family of convolutional filters. We design the filter as a product of a simple step function that captures local geodesic information and a Taylor polynomial that ensures the expressiveness. SpiderCNN inherits the multi-scale hierarchical architecture from classical CNNs, which allows it to extract semantic deep features. Experiments on ModelNet40 demonstrate that SpiderCNN achieves accuracy 92.4% on standard benchmarks, and shows competitive performance on segmentation task.</p>
+  <p> Code is available <a href="https://github.com/xyf513/SpiderCNN">here.</a>
+  </p>
+</div>
+
+<h2>Method</h2>
+
+<div class="w3-card-4 w3-margin w3-white">
+    <img src="/img/pcconv.png" alt="pcimg" style="width:90%">
+    <div class="w3-container">
+      <h4>The integral formula for convolution between a signal $f$ and a filter $g$ is $ f~\ast~g (p) = \int_{q \in \mathbb{R}^n} f(q)g(p-q) dq$. Discretizing the integral formula on a set of points $P$ in  $\mathbb{R}^n$ gives $ f \ast g (p)  = \sum_{q \in P, \| p-q \| \leq r} f(q) g (p-q)$ if $g$ is supported in a ball of radius $r$. (a) when $P$ can be represented by regular grids, only $9$ values of a filter $g$ are needed to compute the convolution due to the translation invariance of the domain. (b) when the signal is on point clouds, we choose the filter $g$ from a parameterized family of function on $\mathbb{R}^3$.</h4>
+    </div>
+</div>
+
+<div class="w3-card-4 w3-margin w3-white">
+    <img src="/img/pckernel.jpg" alt="pcimg" style="width:87%">
+    <div class="w3-container">
+      <h4>We demonstrate the design of the parametrized family of filters through the visualization of a particular filter $g$ in the family. (a) is the scatter plot of $g^{Taylor}(x, y, z) = 1 + x + y + z + xy + xz + yz + xyz$, where color represents the value of the function. (b) is the scatter plot of $g^{step}(x, y, z) = \frac{i+1}{8}$ if $\frac{i}{8} \leq \sqrt{x^2 + y^2 + z^2} < \frac{i+1}{8}$, when $i = 0, 1, ... , 7$. (c) is the scatter plot of the product $g =g^{Taylor} \cdot g^{step}$. In the second row, (d) (e) (f) are  the graphs of $g^{Taylor}$ , $g^{step}$   and $g$  respectively when restricting their domain to the plane $z = 0$ (the $Z$-axis represents the value of the function).</h4>
+    </div>
+</div>
+
+<div class="w3-container">
+<h2>Reference</h2>
+  <p>Xu, Y., Fan, T., Xu, M., Zeng, L., & Qiao, Y. (2018). Spidercnn: Deep learning on point sets with parameterized convolutional filters. In Proceedings of the European Conference on Computer Vision (ECCV) (pp. 87-102). </p>
+</div>
+
+
+
+</article>
+
+      
+
+
+      
+    </div>
+
+    
+  
+
+
+
+
+  </main>
+  
+  
+  
+</body>
+
+</html>

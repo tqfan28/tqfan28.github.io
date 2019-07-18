@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    Geosim
+  
+ | Tianqi Fan</title>
+
+
+
+<link rel="stylesheet" href="/book.min.f4161f5e2de53a2e927f51df1611323a2a12cccb2681f23cb6fc3517852e8643.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://example.com/">Tianqi Fan</a>
+</h2>
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fgeosim\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><strong>Graphics</strong>
+
+<ul>
+<li><a href="/docs/spidercnn/">Point Cloud Processing</a></li>
+<li><a href="/docs/geosim/">Real-time Surface Simplification</a></li>
+<li><a href="/docs/rc2018/">Physically Based Rendering Engine</a></li>
+</ul></li>
+<li><a href="/docs/math/"><strong>Math</strong></a></li>
+<li><a href="/docs/notes/"><strong>Notes</strong></a>
+<!-- - [**Blog**](/posts/) --></li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    Geosim
+  
+</strong>
+</header>
+
+
+      
+<article class="markdown">
+
+<h1 id="surface-simplifcation-in-anydsl">Surface Simplifcation in AnyDSL</h1>
+
+<p><img src="/img/geosimbunny.png" alt="" /></p>
+
+<p>In this project, we implement several geometric simplifcation algorithm (See reference below) in <a href="https://anydsl.github.io/">AnyDSL</a>. Part of the code is available [here]().</p>
+
+<h2 id="anydsl">AnyDSL</h2>
+
+<p>AnyDSL is framework for developing high performance domain specific libraries. The programming language of AnyDSL is <a href="https://anydsl.github.io/Impala.html">Impala</a>. Impala is imperative and functional, which allows user-directed partial evaluation of code.  Optimizations are performed on AnyDSL’s continuation-passing style based intermediate representation <a href="https://anydsl.github.io/Thorin.html">Thorin</a>.</p>
+
+<h2 id="integration-into-rasterization-pipeline">Integration into Rasterization Pipeline</h2>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dmqRAJN1KBU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h2 id="reference">Reference:</h2>
+
+<p>Garland, Michael, and Paul S. Heckbert. &ldquo;Surface simplification using quadric error metrics.&ldquo; Proceedings of the 24th annual conference on Computer graphics and interactive techniques. ACM Press/Addison-Wesley Publishing Co., 1997.</p>
+
+<p>Karras, Tero. &ldquo;Maximizing parallelism in the construction of BVHs, octrees, and k-d trees.&ldquo; Proceedings of the Fourth ACM SIGGRAPH/Eurographics conference on High-Performance Graphics. Eurographics Association, 2012.</p>
+
+<p>Legrand, Hélène, and Tamy Boubekeur. &ldquo;Morton integrals for high speed geometry simplification.&ldquo; Proceedings of the 7th Conference on High-Performance Graphics. ACM, 2015.</p>
+</article>
+
+      
+
+
+      
+    </div>
+
+    
+  
+
+
+
+
+  </main>
+  
+  
+  
+</body>
+
+</html>

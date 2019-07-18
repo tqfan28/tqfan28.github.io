@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    renderer
+  
+ | Tianqi Fan</title>
+
+
+
+<link rel="stylesheet" href="/book.min.f4161f5e2de53a2e927f51df1611323a2a12cccb2681f23cb6fc3517852e8643.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://example.com/">Tianqi Fan</a>
+</h2>
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2frc2018\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><strong>Graphics</strong>
+
+<ul>
+<li><a href="/docs/spidercnn/">Point Cloud Processing</a></li>
+<li><a href="/docs/geosim/">Real-time Surface Simplification</a></li>
+<li><a href="/docs/rc2018/">Physically Based Rendering Engine</a></li>
+</ul></li>
+<li><a href="/docs/math/"><strong>Math</strong></a></li>
+<li><a href="/docs/notes/"><strong>Notes</strong></a>
+<!-- - [**Blog**](/posts/) --></li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    renderer
+  
+</strong>
+</header>
+
+
+      
+<article class="markdown">
+<!DOCTYPE html>
+<html>
+<title>FireflyForest</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>A C++ Physically Based Renderer</b> </a>
+    <p></p>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#renderer" class="w3-bar-item w3-button">Renderer</a>
+      <a href="#techniques" class="w3-bar-item w3-button">Scene</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="/img/merged_120samples-Edit.png" alt="edit" width="1500" height="800" >
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-text-yellow w3-opacity-min"><b>Firefly</b></span> <span class="w3-hide-small w3-text-light-grey">Forest</span></h1>
+  </div>
+</header>
+
+<!-- contents -->
+<div class="w3-container w3-padding-32" id="renderer">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About the Renderer</h3>
+    <p>
+    The scene is rendered with a simple C++ path tracer. It supports diffuse, glossy, glassy, specular materials. It supports bump map, perlin noise, and various of texture mappings. It supports depth of field and motion blur. BVH with SAH is used for ray tracing acceleration.
+    </p>
+</div>
+
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="/img/cow.png" alt="object" style="width:100%" class="w3-hover-opacity">
+    </div>
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="/img/perlin.png" alt="object" style="width:100%" class="w3-hover-opacity">
+    </div>
+    <div class="w3-third w3-container">
+      <img src="/img/glass.png" alt="object" style="width:100%" class="w3-hover-opacity">
+    </div>
+  </div>
+
+  <!-- Concept Section -->
+<!-- <div class="w3-container w3-padding-32" id="concept">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Construction of the scene</h3>
+    <p>
+    On a summer night, with the sky still a touch blue from the late setting sun, we arrive at a quiet pond surrounded by lush green grass and blooming pink crysanthemums. Fireflies dance merrily around the blossoms in celebration of new life, while the silhouettes of the lifeless trees reflecting in the pond are a sombre reminder of the nuclear disaster many years ago.
+    </p>
+</div> -->
+
+  <!-- Techniques Section -->
+<div class="w3-container w3-padding-32" id="techniques">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Construction of the scene</h3>
+    <p> The assets for the scene were created with Blender 2.79, including the geometry, textures, and compositing the scene. The basic objects are the forest floor, the flowers, the grass, and the tree. The tree is modified from a model obtained from Blender Guru tutorial: Make a Grassy Meadow Scene.
+    </p>
+</div>
+
+
+
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="/img/landscape.png" alt="object" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Forest Floor</b></p>
+        <p>The geometry of forest floor is shaped out of a plane using the Sculpt tool in Blender. Particle system is used to populate the forest floor with flowers and grass</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="/img/flower_grass.png" alt="object" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Flowers and Grass</b></p>
+        <p>Three flowers and grass leaves with different image textures are created manually.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="/img/scene1.png" alt="scene" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>First Test</b></p>
+        <p>All the surfaces are lambertian. 100 yellow point lights are randomly generated.</p>
+      </div>
+    </div>
+
+  <div class="w3-container w3-padding-32" id="lighting">
+    <p> Various light sources are tested for their effect on illuminating the scence. In the first two images below, 100 little yellow spheres are randomly generated to represent the fireflies. One sample per pixels is used.
+    </p>
+  </div>
+
+
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="/img/5pointlight.png" alt="light" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Fixed Point Lights</b></p>
+        <p>5 point lights are carefully placed. </p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="/img/50pointlight.png" alt="light" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Random Point Lights </b></p>
+        <p>39 point lights are randomly generated for illumination.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="/img/arealight.png" alt="light" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Spherial Area Lights</b></p>
+        <p>42 fireflies are randomly generated as small spherial area lights.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Final Render (120 rays per pixel)</h3>
+    <p>
+    </p>
+  </div>
+
+<div class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="/img/merged_120samples-Edit.png" alt="Architecture" width="1500" height="800">
+</div>
+
+
+<!-- End page content -->
+<div>
+  <p></p>
+  <p></p>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-white w3-padding-16">
+  <p>The website template is from <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+</body>
+</html>
+</article>
+
+      
+
+
+      
+    </div>
+
+    
+  
+
+
+
+
+  </main>
+  
+  
+  
+</body>
+
+</html>

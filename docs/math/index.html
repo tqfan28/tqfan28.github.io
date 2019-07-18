@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    math
+  
+ | Tianqi Fan</title>
+
+
+
+<link rel="stylesheet" href="/book.min.f4161f5e2de53a2e927f51df1611323a2a12cccb2681f23cb6fc3517852e8643.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://example.com/">Tianqi Fan</a>
+</h2>
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fmath\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><strong>Graphics</strong>
+
+<ul>
+<li><a href="/docs/spidercnn/">Point Cloud Processing</a></li>
+<li><a href="/docs/geosim/">Real-time Surface Simplification</a></li>
+<li><a href="/docs/rc2018/">Physically Based Rendering Engine</a></li>
+</ul></li>
+<li><a href="/docs/math/"><strong>Math</strong></a></li>
+<li><a href="/docs/notes/"><strong>Notes</strong></a>
+<!-- - [**Blog**](/posts/) --></li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    math
+  
+</strong>
+</header>
+
+
+      
+<article class="markdown"><h1>A Journey towards p-adic Beilinson-Bernstein Localization</h1>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <title>spidercnn</title> -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+<h2> First Stop: $\mathcal{D}^{\infty}$-modules on smooth rigid analytic varieties over a complete discrete valued field</h2>
+<div>
+<p>
+Let us briefly recall some stories of analytic $\mathcal{D}$-modules on a smooth complex analytic manifold. Suppose $X$ is a smooth complex manifold and $i: Z \hookrightarrow X$ is a closed analytic subset of codimension $d$ with the sheaf of ideals $\mathcal{I}_Z$. Let $\mathcal{D}_X$ and $\mathcal{D}_Z$ be the sheaves of differential operators on $X$ and $Z$ respectively. The classical Kashiwara's equivalence says that the subcategory of coherent $\mathcal{D}_X$-modules which are annihilated by a power of $\mathcal{I}_Z$  is equivalent to the category of coherent $\mathcal{D}_Z$-modules, via the functors
+\[
+  \mathcal{N} \to i_* (\mathcal{D}_{X \hookleftarrow Z} \otimes_{\mathcal{D}_Z} \mathcal{N}), \ \text{if $\mathcal{N}$ is a coherent $\mathcal{D}_Z$-module},
+\]
+and
+\[
+  \mathcal{M} \to i^{-1} \mathcal{H}om_{\mathcal{D}_X} (\mathcal{D}_{X \hookleftarrow Z}, \mathcal{M}), \
+  \text{if $\mathcal{M}$ is a coherent $\mathcal{D}_X$-module such that  $\Gamma_{[Z]}(\mathcal{M}) \simeq \mathcal{M}$},
+\]
+where by definition
+$\Gamma_{[Z]}(\mathcal{M}) = \displaystyle \lim_{\overrightarrow{k}} \mathcal{H}om_{\mathcal{O}_X}(\mathcal{O}_X / \mathcal{I}_Z^k, \mathcal{M})$ for any $\mathcal{O}_X$-module $\mathcal{M}$, and
+$\mathcal{D}_{X \hookleftarrow Z}$ is the  transferring $(i^{-1}\mathcal{D}_X, \mathcal{D}_Z)$-bimodule (\cite{micro} Theorem 4.30).
+In particular, under the Kashiwara's equivalence, the algebraic local cohomology
+\[
+\mathcal{B}_{Z/X} = \displaystyle \lim_{\overrightarrow{k}} \mathcal{E}xt_{\mathcal{O}_X}^d(\mathcal{O}_X / \mathcal{I}_Z^k, \mathcal{O}_X) \simeq
+i_* (\mathcal{D}_{X \hookleftarrow Z} \otimes_{\mathcal{D}_Z} \mathcal{O}_Z)
+\]
+of $Z$ in $X$, is a coherent $\mathcal{D}_X$-module. However, if we consider the local cohomology $\mathbf{R}^d \Gamma_{Z}(\mathcal{O}_X)$, where $\Gamma_{Z}(\mathcal{M}) = \{ s \in \mathcal{M} \mid s |_{X \backslash Z} = 0 \}$ for any $\mathcal{O}_X$-module $\mathcal{M}$, and $\mathbf{R}^d \Gamma_{Z}$ is the $d$-th derived functor of $\Gamma_{Z}$, this is not coherent over $\mathcal{D}_X$ anymore. It is demonstrated in Mebkhout's paper <a href="#Mebkhout" class="w3-bar-item w3-button">[1]</a> that there exists a sheaf of infinite order differential operator operator  with convergence conditions $\mathcal{D}^{\infty}_X$, such that $\mathcal{D}^{\infty}_X \otimes_{\mathcal{D}_X}\mathcal{B}_{Z/X} \simeq  \mathbf{R}^d \Gamma_{Z}(\mathcal{O}_X)$.
+</p>
+<p>
+The most important feature of a coherent $\mathcal{D}_X$-module is the existence of its characteristic variety, which is a conic closed analytic subset of the cotangent bundle of $X$, involutive with respect to the canonical symplectic structure on the cotangent bundle. When the associated characteristic variety is Lagrangian, we say the coherent $\mathcal{D}_X$-module is holonomic. The Riemann-Hilbert correspondence states that the category of regular holonomic $\mathcal{D}_X$-modules is equivalent to the category of perverse sheaves via the de Rham functor
+\[
+  DR_X: \mathcal{M} \to \mathbf{R}\mathcal{H}om_{\mathcal{D}_X}(\mathcal{O}_X, \mathcal{M}), \ \text{if $\mathcal{M}$ is a regular holonomic $\mathcal{D}_X$-module}.
+\]
+There is no explicit inverse functor to the de Rham functor. However, if we are willing to consider $\mathcal{D}^{\infty}_X$-modules, for any holonomic $\mathcal{D}_X$-module $\mathcal{M}$, we have (Theorem 3.4.11 in \cite{bj}):
+\[
+\mathcal{D}^{\infty}_X \otimes_{\mathcal{D}_X} \mathcal{M} \simeq \mathbf{R}\mathcal{H}om_{\mathbb{C}_X}(\mathcal{S}ol_X(\mathcal{M}), \mathcal{O}_X),
+\]
+where the solution functor $\mathcal{S}ol_X$ is related to $DR_X$ explicitly:
+\[
+\mathcal{S}ol_X(\mathcal{M}) =  \mathbf{R}\mathcal{H}om_{\mathcal{D}_X}( \mathcal{M}, \mathcal{O}_X) \simeq DR_X(\mathbb{D}_X (\mathcal{M})),
+\]
+and
+\[
+\mathbb{D}_X (\mathcal{M}) = \mathbf{R}\mathcal{H}om_{\mathcal{D}_X}(\mathcal{M}, \mathcal{D}_X \otimes_{\mathcal{O}_X} \Omega_X^{-1}) [\text{ dimension of $X$ }]
+\]
+is the duality functor. Moreover, there exists a unique regular holonomic $\mathcal{D}_X$-module $\mathcal{M}_{reg}$ such that $\mathcal{D}^{\infty}_X \otimes_{\mathcal{D}_X} \mathcal{M}_{reg} = \mathcal{D}^{\infty}_X \otimes_{\mathcal{D}_X} \mathcal{M} $, $\mathcal{M}_{reg}$ contains all the regular holonomic $\mathcal{D}_X$-submodules of $\mathcal{D}^{\infty}_X \otimes_{\mathcal{D}_X} \mathcal{M}$, and $\mathcal{S}ol_X(\mathcal{M}) = \mathcal{S}ol_X(\mathcal{M}_{reg})$ (Theorem 5.2.22 of <a href="#bj" class="w3-bar-item w3-button"> [2] </a>).
+</p>
+<p>
+To explore $p$-adic $\mathcal{D}$-modules, let us first look at a simple case. Let  $X= \text{Spa} (\mathbb{Q}_p \langle x \rangle, \mathbb{Z}_p \langle x \rangle)$ be the unit disk, let $Z = \{ 0 \}$ be the origin, and let $j: U \hookrightarrow X$ be the open immersion, where $U = X \backslash \{ 0\}$. Then the algebraic local cohomology of $Z$ in $X$ is $\mathcal{B}_{Z/X} \simeq \mathcal{D}_X / \mathcal{D}_X x$, and the local cohomology of $Z$ in $X$ is  $\mathbf{R}^1 \Gamma_{\{0\}}(\mathcal{O}_X) \simeq j_* \mathcal{O}_U / \mathcal{O}_X$. In order to have $\mathbf{R}^1 \Gamma_{\{0\}}(\mathcal{O}_X) \simeq \mathcal{D}^{\infty}_X \otimes_{\mathcal{D}_X} (\mathcal{D}_X / \mathcal{D}_X x)$, we study the convergent condition of $j_* \mathcal{O}_U / \mathcal{O}_X$ at $Z$ and propose the following definition of a presheaf of infinite order differential operators $\mathcal{D}^{\infty}_X$:
+\[
+\mathcal{D}^{\infty}_X (V) = \left\{ \sum_{i \geq 0} a_i \partial^i\ \Big{|} \ a_i \in \mathcal{O}_X (V),   \text{for any $n \in \mathbb{N}$ } \left\|\frac{a_i}{p^{ni}} \right\| \xrightarrow[i\to \infty]{} 0\right\},
+\]
+where $\partial$ is the dual to the differential $dx$, and $V \subseteq X$ is an open affinoid subdomain. We observe that this definition generalizes easily to any smooth rigid analytic variety.
+</p>
+<p>
+If $X$ is a smooth rigid analytic variety over $K$, in the <a href="#thesis" class="w3-bar-item w3-button"> thesis [7] </a>, we prove that $\mathcal{D}^{\infty}_X$ is a sheaf of Fr\'{e}chet-Stein algebra. A Fr\'{e}chet-Stein algebra is a inverse limit of noetherian Banach algebra with flat transition maps.  Schneider and Teitelbaum  <a href="#STA" class="w3-bar-item w3-button"> in [3] </a> systematically developed a general theory of coadmissible modules over Fr\'{e}chet-Stein algebras. Here being codamissible is the analogous condition of being coherent. We also prove that there exists a good definition of coadmissible modules over sheaves of Fr\'{e}chet-Stein algebras. For example, when $X$ is the unit disk, $\mathcal{M}$ is a coadmissible $\mathcal{D}_X^{\infty}$-module, if and only if $\Gamma( X, \mathcal{M})$ is a coadmissible module over $\Gamma(X, \mathcal{D}^{\infty}_X)$ and $\mathcal{M} (V) \simeq \mathcal{D}^{\infty}_X (V) \widehat{\otimes}_{\Gamma(X, \mathcal{D}^{\infty}_X)} \Gamma(X, \mathcal{M})$ is a coadmissible module over $\mathcal{D}^{\infty}_X(V)$,  for any $V \subseteq X$ open affinoid subdomain. We also remark that it is proved in the work Ardakov and Wadsley<a href="#AWKas" class="w3-bar-item w3-button"> [4] </a> that Kashiwara's equivalence holds for coadmissible $\mathcal{D}^{\infty}_X$-modules.
+</p>
+<p>
+We can also define $p$-adic microlocal differential operators $\mathcal{E}_X$ and $\mathcal{E}_X^{\infty}$ on the cotangent bundle $T^*X$ of $X$.
+</p>
+</div>
+
+
+<h2> Second Stop: Equivariant $\mathcal{D}^{\infty}$-modules on smooth rigid analytic varieties over a complete discrete valued field</h2>
+
+<div>
+  <p>
+  Let us briefly recall  the relation between the unitary representations of a real semi-simple Lie group $G_{\mathbb{R}}$ with finite center and the geometry of the complex flag variety. Let $\mathfrak{g}$ be the complexification of the Lie algebra of $G_{\mathbb{R}}$, and $K$ be the complexifiction of a maximal compact $K_{\mathbb{R}}$ of $G_{\mathbb{R}}$. Let $X$ be the flag variety of $\mathfrak{g}$, whose analytification is $X^{an}$. Let $\mathcal{U}(\mathfrak{g})$ be the universal enveloping algebra of $\mathfrak{g}$, and $\mathcal{D}_X$ be the sheaf of differential operators on $X$. Suppose $E$ is an irreducible unitary representation of $G_{\mathbb{R}}$ over $\mathbb{C}$. On one hand, the subspace $M = E^{K_{\mathbb{R}-\text{finite}}}$ of $K_{\mathbb{R}}$-finite vectors of $E$ is a Harish-Chandra module. For simplicity we assume $M$ has trivial infinitesimal central character. Hence by Beilinson-Bernstein localization theorem, the sheaf $\mathcal{M} = \mathcal{D}_X \otimes_{\mathcal{U}(\mathfrak{g})} E^{K_{\mathbb{R}-\text{finite}}}$ is a $K$-equivariant coherent $\mathcal{D}_X$-module on $X$, whose global section is $M$. Since there are finitely many $K$-orbits on $X$, a $K$-equivariant coherent $\mathcal{D}_X$-module is regular holonomic. Therefore by Riemman-Hilbert correspondence,  $DR_X(\mathcal{M}) = \mathbf{R}\mathcal{H}om_{\mathcal{D}_X} ( \mathcal{O}_X, \mathcal{M})$ is a $K$-equivariant perverse sheaves on $X$. On the other hand, the Matsuki duality generalizes to an equivalence $\Phi$ in Theorem 1.42 <a href="#repr" class="w3-bar-item w3-button"> [5] </a> between the bounded $K$-equivariant derived category of $\mathbb{C}_X$-sheaves and the $G_{\mathbb{R}}$-equivariant derived category of $\mathbb{C}_X$-sheaves. Let $C^{\infty}(G_{\mathbb{R}})$ be space of smooth functions on $G_{\mathbb{R}}$. Then the maximal globalization of $M$ is $Hom^{top}_{\mathcal{U}(\mathfrak{g})}(M^*, C^{\infty}(G_{\mathbb{R}}))$, which is an admissible $G_{\mathbb{R}}$-representations of finite length with nuclear Fr\'{e}chet topology, whose $K_{\mathbb{R}}$-finite vectors are $M$.
+</p>
+<p>
+By <a href="#repr" class="w3-bar-item w3-button"> [5] </a> section 1.7
+\[
+\mathbf{R}Hom^{top}_{\mathcal{U}(\mathfrak{g})}(M^*, C^{\infty}(G_{\mathbb{R}})) \simeq \mathbf{R} \mathcal{H}om_{\mathbb{C}_X} (\Phi(DR_X(\mathcal{M})), \Omega_{X^{an}}[\text{dimension of $X$}]).
+\]
+Let $\Gamma_c(G_{\mathbb{R}}, Dist_{G_{\mathbb{R}}})$ be the space of distribution on $G_{\mathbb{R}}$ with compact support.
+Then the minimal globalization of $M$ is $\Gamma_c(G_{\mathbb{R}}, Dist_{G_{\mathbb{R}}}) \otimes_{\mathcal{U}(\mathfrak{g})} M$, which is an admissible $G_{\mathbb{R}}$-representations of finite length with dual nuclear Fr\'{e}chet topology, whose $K_{\mathbb{R}}$-finite vectors are $M$.
+By <a href="#repr" class="w3-bar-item w3-button"> [5] </a> section 1.7
+\[
+\Gamma_c(G_{\mathbb{R}}, Dist_{G_{\mathbb{R}}}) \otimes^{\mathbf{L}}_{(\mathfrak{g}, K_{\mathbb{R}})} M \simeq \mathbf{R}\Gamma_c^{top}(X^{an}, \Phi(DR_X(\mathcal{M})) \otimes \mathcal{O}_{X^{an}}).
+\]
+For example, when $\mathbf{G} = GL_2$, $K_{\mathbb{R}} = O(2)$ and $X = \mathbb{P}^1$, there are two $K$-orbits $\{ i, -i \}$ and the complement $\mathbb{P}^{1} \backslash \{ i, -i \}$. By Matsuki duality, the $K$-orbit $\{ i, -i \}$ corresponds to the $GL_2(\mathbb{R})$-orbit $\mathbb{P}^1 \backslash \mathbb{P}^1(\mathbb{R})$, and the $K$-orbit $\mathbb{P}^{1} \backslash \{ i, -i \}$ corresponds to $GL_2(\mathbb{R})$-orbit $\mathbb{P}^1(\mathbb{R})$. By Beilinson-Bernstein localization,
+the $K$-orbit $\{ i, -i \}$ corresponds to discrete series, and the $K$-orbit $\mathbb{P}^{1} \backslash \{ i, -i \}$ corresponds to principal series.
+</p>
+<p>
+We would like to know whether it is possible to have a parallel story for admissible locally analytic representations of $p$-adic groups. In the <a href="#thesis" class="w3-bar-item w3-button"> thesis [7] </a>, if $\mathbb{G}$ is a rigid analytic group acting on $X$ and $\mathcal{A}_{\mathcal{T}_X}$ is a  $\mathbb{G}$-equivariant twisted differential operators, we define an abelian category of coadmissible $G$-equivariant $\mathcal{A}^{\infty}_{\mathcal{T}_X}$-modules on $X$, where $G$ is the $\mathbb{Q}_p$-rational points of $\mathbb{G}$, viewed as a $p$-adic Lie group. We show that under certain restrictions, when $\mathbb{G}$ is the rigid analytification of a connected split reductive linear algebraic group $\mathbf{G}$ and $X$ is the rigid analytification of the flag variety of $\mathbf{G}$, the category of admissible locally analytic representations of $G$ with a fixed infinitesimal central character is equivalent to the category of coadmissible $G$-equivariant twisted $\mathcal{D}^{\infty}$-modules on $X$.
+</p>
+<p>
+For example, let $X = \mathbb{P}^1$ and $\mathbb{G} = \text{GL}_2$. If $j: U \hookrightarrow X$ is the natural inclusion of the Drinfeld upper half plane $U$ in $\mathbb{P}^1$ with the complement $\mathbb{P}^1(\mathbb{Q}_p)$, we have the following exact sequence of coadmissible $\text{GL}_2(\mathbb{Q}_p)$-equivariant $\mathcal{D}^{\infty}$-modules on $\mathbb{P}^1$:
+\[
+0 \to \mathcal{O}_X \to j_* \mathcal{O}_U \to \mathcal{H}^1_{\mathbb{P}^1(\mathbb{Q}_p)} \to 0,
+\]
+where $\mathcal{H}^1_{\mathbb{P}^1(\mathbb{Q}_p)}$ is defined to be the quotient $j_* \mathcal{O}_U / \mathcal{O}_X$. The global sections of $\mathcal{H}^1_{\mathbb{P}^1(\mathbb{Q}_p)}$ form a principal series (the Orlik-Strauch induction of weight $-2$ Verma module). By the computation in section 3.5 in the <a href="#thesis" class="w3-bar-item w3-button"> thesis [7] </a>, we see that in general a principal series corresponds to an equivariant twisted $\mathcal{D}^{\infty}$-module on $\mathbb{P}^1$ with support in $\mathbb{P}^1 (\mathbb{Q}_p)$.   By the work of Dospinescu and Le Bras, the push-forward of the structure sheaves of Drinfeld covers are also  coadmissible $\text{GL}_2(\mathbb{Q}_p)$-equivariant $\mathcal{D}^{\infty}$-modules on $\mathbb{P}^1$. Motiviated by the classical $GL_2(\mathbb{R})$-picture and the proof of <a href="#kisin" class="w3-bar-item w3-button"> [6] </a> Proposition 7.1.3, we conjecture that if $\mathcal{M}$ is a coadmissible $GL_2(\mathbb{Q}_p)$-equivariant $\mathcal{D}^{\infty}$-module on $\mathbb{P}^1$, and $u \in \mathbb{P}^1$ is not a $\mathbb{Q}_p$-rational point, then the support of $\mathcal{M}$ cannot be the closure of the $GL_2(\mathbb{Q}_p)$-orbit of $u$.
+</p>
+
+</div>
+
+<h2>Reference</h2>
+
+
+<div class="w3-container w3-padding-32" id="Mebkhout"><p>
+[1]    Z. Mebkhout, Cohomologie locale d'une hypersurface, Fonctions de Plusieurs Variables Complexes III. Springer Berlin Heidelberg, 1978. 89-119.
+    </p>
+</div>
+<div class="w3-container w3-padding-32" id="bj"><p>
+[2]    J.-E. Bj\"{o}rk, Analytic D-Modules and Applications, Vol. 247. Springer Science and Business Media, 2013.
+    </p>
+</div>
+
+<div class="w3-container w3-padding-32" id="STA"><p>
+[3]    P. Schneider, J. Teitelbaum, Algebras of $p$-adic distributions and admissible representations
+    </p>
+</div>
+
+<div class="w3-container w3-padding-32" id="AWKas"><p>
+[4]    K. Ardakov, S. Wadsley, $\widehat{\mathcal{D}}$-modules on rigid analytic spaces II: Kashiwara's equivalence
+    </p>
+</div>
+
+<div class="w3-container w3-padding-32" id="repr"><p>
+[5]    M. Kashiwara, Equivariant derived category and
+representation of real semisimple Lie groups, Representation theory and complex analysis (2008): 137-234.
+    </p>
+</div>
+
+<div class="w3-container w3-padding-32" id="kisin"><p>
+[6]    M. Kisin, and M. Strauch. Locally analytic cuspidal representations for ${GL}_2$ and related groups}, Journal of the Institute of Mathematics of Jussieu 5.03 (2006): 373-421.
+</p>
+</div>
+
+<div class="w3-container w3-padding-32" id="thesis"><p>
+[7]   Fan, T. (2017). $\mathcal{D}^{\infty}$-Modules on Smooth Rigid Analytic Varieties and LocallyAnalytic Representations. The University of Chicago.
+    </p>
+</div>
+
+</body>
+</article>
+
+      
+
+
+      
+    </div>
+
+    
+  
+
+
+
+
+  </main>
+  
+  
+  
+</body>
+
+</html>
