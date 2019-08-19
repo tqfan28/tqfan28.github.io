@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docs on Tianqi Fan</title>
-    <link>https://tqfan28.github.io/docs/</link>
+    <link>http://tqfan28.github.io/docs/</link>
     <description>Recent content in Docs on Tianqi Fan</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	<atom:link href="https://tqfan28.github.io/docs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://tqfan28.github.io/docs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>https://tqfan28.github.io/docs/draw/</link>
+      <link>http://tqfan28.github.io/docs/draw/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://tqfan28.github.io/docs/draw/</guid>
+      <guid>http://tqfan28.github.io/docs/draw/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://tqfan28.github.io/docs/geosim/</link>
+      <link>http://tqfan28.github.io/docs/geosim/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://tqfan28.github.io/docs/geosim/</guid>
+      <guid>http://tqfan28.github.io/docs/geosim/</guid>
       <description>Surface Simplifcation in AnyDSL In this project, we implement several geometric simplifcation algorithm (See reference below) in AnyDSL. Part of the code is available [here]().
 AnyDSL AnyDSL is framework for developing high performance domain specific libraries. The programming language of AnyDSL is Impala. Impala is imperative and functional, which allows user-directed partial evaluation of code. Optimizations are performed on AnyDSL’s continuation-passing style based intermediate representation Thorin.
 Integration into Rasterization Pipeline  Reference: Garland, Michael, and Paul S.</description>
@@ -31,10 +31,10 @@ Integration into Rasterization Pipeline  Reference: Garland, Michael, and Paul S
     
     <item>
       <title></title>
-      <link>https://tqfan28.github.io/docs/notes/</link>
+      <link>http://tqfan28.github.io/docs/notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://tqfan28.github.io/docs/notes/</guid>
+      <guid>http://tqfan28.github.io/docs/notes/</guid>
       <description> Some Notes Here are some notes I wrote in the process of learning certain topics.
  Notes on Beilinson-Bernstein Localization Theory
  Notes on Reinforcement Learning (In progress)
@@ -43,38 +43,38 @@ Integration into Rasterization Pipeline  Reference: Garland, Michael, and Paul S
     
     <item>
       <title></title>
-      <link>https://tqfan28.github.io/docs/shortcodes/</link>
+      <link>http://tqfan28.github.io/docs/shortcodes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://tqfan28.github.io/docs/shortcodes/</guid>
+      <guid>http://tqfan28.github.io/docs/shortcodes/</guid>
       <description>Shortcodes Expand shortcode Default {{&amp;lt; expand &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}}  Expand ↕  Markdown content Lorem markdownum insigne&amp;hellip;    With Custom Label {{&amp;lt; expand &amp;#34;Custom Label&amp;#34; &amp;#34;...&amp;#34; &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}}  Custom Label ...  Markdown content Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa protulit, sed sed aere valvis inhaesuro Pallas animam: qui quid, ignes.</description>
     </item>
     
     <item>
       <title>math</title>
-      <link>https://tqfan28.github.io/docs/math/</link>
+      <link>http://tqfan28.github.io/docs/math/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://tqfan28.github.io/docs/math/</guid>
+      <guid>http://tqfan28.github.io/docs/math/</guid>
       <description>A Journey towards p-adic Beilinson-Bernstein Localization   spidercnn -- MathJax.Hub.Config({tex2jax: {inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]]}});     First Stop: $\mathcal{D}^{\infty}$-modules on smooth rigid analytic varieties over a complete discrete valued field   Let us briefly recall some stories of analytic $\mathcal{D}$-modules on a smooth complex analytic manifold. Suppose $X$ is a smooth complex manifold and $i: Z \hookrightarrow X$ is a closed analytic subset of codimension $d$ with the sheaf of ideals $\mathcal{I}_Z$.</description>
     </item>
     
     <item>
       <title>renderer</title>
-      <link>https://tqfan28.github.io/docs/rc2018/</link>
+      <link>http://tqfan28.github.io/docs/rc2018/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://tqfan28.github.io/docs/rc2018/</guid>
+      <guid>http://tqfan28.github.io/docs/rc2018/</guid>
       <description>FireflyForest  A C++ Physically Based Renderer  
 Renderer Scene    Firefly Forest   About the Renderer  The scene is rendered with a simple C++ path tracer. It supports diffuse, glossy, glassy, specular materials. It supports bump map, perlin noise, and various of texture mappings. It supports depth of field and motion blur. BVH with SAH is used for ray tracing acceleration.      Construction of the scene  On a summer night, with the sky still a touch blue from the late setting sun, we arrive at a quiet pond surrounded by lush green grass and blooming pink crysanthemums.</description>
     </item>
     
     <item>
       <title>spidercnn</title>
-      <link>https://tqfan28.github.io/docs/spidercnn/</link>
+      <link>http://tqfan28.github.io/docs/spidercnn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://tqfan28.github.io/docs/spidercnn/</guid>
+      <guid>http://tqfan28.github.io/docs/spidercnn/</guid>
       <description>Exploiting Deep Learning for Point Cloud Processing --   spidercnn -- MathJax.Hub.Config({tex2jax: {inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]]}});     --  Point cloud segmentation examples. Point cloud segmentation examples. April 7, 2014  --  Abstract  In this project, we propose a convolutional architecture, termed SpiderCNN, to efficiently extract geometric features from point clouds. SpiderCNN is comprised of units called SpiderConv, which extend convolutional operations from regular grids to irregular point sets that can be embedded in $\mathbb{R}^n$, by parametrizing a family of convolutional filters.</description>
     </item>
     
