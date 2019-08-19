@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About me on Tianqi Fan</title>
-    <link>https://example.com/</link>
+    <link>https://tqfan28.github.io/</link>
     <description>Recent content in About me on Tianqi Fan</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tqfan28.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Creating a New Theme</title>
-      <link>https://example.com/posts/creating-a-new-theme/</link>
+      <link>https://tqfan28.github.io/posts/creating-a-new-theme/</link>
       <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/posts/creating-a-new-theme/</guid>
+      <guid>https://tqfan28.github.io/posts/creating-a-new-theme/</guid>
       <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
 We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
     </item>
     
     <item>
       <title>Migrate to Hugo from Jekyll</title>
-      <link>https://example.com/posts/migrate-from-jekyll/</link>
+      <link>https://tqfan28.github.io/posts/migrate-from-jekyll/</link>
       <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/posts/migrate-from-jekyll/</guid>
+      <guid>https://tqfan28.github.io/posts/migrate-from-jekyll/</guid>
       <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
 ▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
 ▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
@@ -33,20 +33,20 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     
     <item>
       <title>(Hu)go Template Primer</title>
-      <link>https://example.com/posts/goisforlovers/</link>
+      <link>https://tqfan28.github.io/posts/goisforlovers/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/posts/goisforlovers/</guid>
+      <guid>https://tqfan28.github.io/posts/goisforlovers/</guid>
       <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
 This document is a brief primer on using Go templates.</description>
     </item>
     
     <item>
       <title>Getting Started with Hugo</title>
-      <link>https://example.com/posts/hugoisforlovers/</link>
+      <link>https://tqfan28.github.io/posts/hugoisforlovers/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/posts/hugoisforlovers/</guid>
+      <guid>https://tqfan28.github.io/posts/hugoisforlovers/</guid>
       <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
 Save it somewhere specific as we will be using it in the next step.
 More complete instructions are available at Install Hugo
@@ -57,19 +57,19 @@ Follow the following steps:
     
     <item>
       <title></title>
-      <link>https://example.com/docs/draw/</link>
+      <link>https://tqfan28.github.io/docs/draw/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/docs/draw/</guid>
+      <guid>https://tqfan28.github.io/docs/draw/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://example.com/docs/geosim/</link>
+      <link>https://tqfan28.github.io/docs/geosim/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/docs/geosim/</guid>
+      <guid>https://tqfan28.github.io/docs/geosim/</guid>
       <description>Surface Simplifcation in AnyDSL In this project, we implement several geometric simplifcation algorithm (See reference below) in AnyDSL. Part of the code is available [here]().
 AnyDSL AnyDSL is framework for developing high performance domain specific libraries. The programming language of AnyDSL is Impala. Impala is imperative and functional, which allows user-directed partial evaluation of code. Optimizations are performed on AnyDSL’s continuation-passing style based intermediate representation Thorin.
 Integration into Rasterization Pipeline  Reference: Garland, Michael, and Paul S.</description>
@@ -77,10 +77,10 @@ Integration into Rasterization Pipeline  Reference: Garland, Michael, and Paul S
     
     <item>
       <title></title>
-      <link>https://example.com/docs/notes/</link>
+      <link>https://tqfan28.github.io/docs/notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/docs/notes/</guid>
+      <guid>https://tqfan28.github.io/docs/notes/</guid>
       <description> Some Notes Here are some notes I wrote in the process of learning certain topics.
  Notes on Beilinson-Bernstein Localization Theory
  Notes on Reinforcement Learning (In progress)
@@ -89,38 +89,38 @@ Integration into Rasterization Pipeline  Reference: Garland, Michael, and Paul S
     
     <item>
       <title></title>
-      <link>https://example.com/docs/shortcodes/</link>
+      <link>https://tqfan28.github.io/docs/shortcodes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/docs/shortcodes/</guid>
+      <guid>https://tqfan28.github.io/docs/shortcodes/</guid>
       <description>Shortcodes Expand shortcode Default {{&amp;lt; expand &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}}  Expand ↕  Markdown content Lorem markdownum insigne&amp;hellip;    With Custom Label {{&amp;lt; expand &amp;#34;Custom Label&amp;#34; &amp;#34;...&amp;#34; &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}}  Custom Label ...  Markdown content Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa protulit, sed sed aere valvis inhaesuro Pallas animam: qui quid, ignes.</description>
     </item>
     
     <item>
       <title>math</title>
-      <link>https://example.com/docs/math/</link>
+      <link>https://tqfan28.github.io/docs/math/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/docs/math/</guid>
+      <guid>https://tqfan28.github.io/docs/math/</guid>
       <description>A Journey towards p-adic Beilinson-Bernstein Localization   spidercnn -- MathJax.Hub.Config({tex2jax: {inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]]}});     First Stop: $\mathcal{D}^{\infty}$-modules on smooth rigid analytic varieties over a complete discrete valued field   Let us briefly recall some stories of analytic $\mathcal{D}$-modules on a smooth complex analytic manifold. Suppose $X$ is a smooth complex manifold and $i: Z \hookrightarrow X$ is a closed analytic subset of codimension $d$ with the sheaf of ideals $\mathcal{I}_Z$.</description>
     </item>
     
     <item>
       <title>renderer</title>
-      <link>https://example.com/docs/rc2018/</link>
+      <link>https://tqfan28.github.io/docs/rc2018/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/docs/rc2018/</guid>
+      <guid>https://tqfan28.github.io/docs/rc2018/</guid>
       <description>FireflyForest  A C++ Physically Based Renderer  
 Renderer Scene    Firefly Forest   About the Renderer  The scene is rendered with a simple C++ path tracer. It supports diffuse, glossy, glassy, specular materials. It supports bump map, perlin noise, and various of texture mappings. It supports depth of field and motion blur. BVH with SAH is used for ray tracing acceleration.      Construction of the scene  On a summer night, with the sky still a touch blue from the late setting sun, we arrive at a quiet pond surrounded by lush green grass and blooming pink crysanthemums.</description>
     </item>
     
     <item>
       <title>spidercnn</title>
-      <link>https://example.com/docs/spidercnn/</link>
+      <link>https://tqfan28.github.io/docs/spidercnn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/docs/spidercnn/</guid>
+      <guid>https://tqfan28.github.io/docs/spidercnn/</guid>
       <description>Exploiting Deep Learning for Point Cloud Processing --   spidercnn -- MathJax.Hub.Config({tex2jax: {inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]]}});     --  Point cloud segmentation examples. Point cloud segmentation examples. April 7, 2014  --  Abstract  In this project, we propose a convolutional architecture, termed SpiderCNN, to efficiently extract geometric features from point clouds. SpiderCNN is comprised of units called SpiderConv, which extend convolutional operations from regular grids to irregular point sets that can be embedded in $\mathbb{R}^n$, by parametrizing a family of convolutional filters.</description>
     </item>
     
